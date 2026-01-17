@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  android-204:
+    image: nginx:alpine
+    container_name: android-204
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "80:80"
+    restart: unless-stopped
